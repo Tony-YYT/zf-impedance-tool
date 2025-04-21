@@ -65,7 +65,7 @@ if compare_mode:
 ax.set_xlabel("Frequency (MHz)")
 ax.set_ylabel("Impedance (mΩ)")
 ax.set_title("電容並聯堆疊後的電源阻抗 Z(f)")
-ax.set_ylim(0, 1000)  # 設定最大值到 1 Ω（= 1,000 mΩ）
+ax.set_ylim(0, 10000)  # 設定最大值到 10 Ω（= 10,000 mΩ）
 ax.grid(True, which="both", ls="--", lw=0.5)
 ax.legend()
 st.pyplot(fig)

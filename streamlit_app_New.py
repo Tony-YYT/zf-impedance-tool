@@ -23,9 +23,9 @@ st.subheader("電容參數設定")
 
 for i in range(num_cap_types):
     with st.expander(f"電容種類 {i+1}", expanded=(i < 3)):
-        C = st.number_input(f"容值 C{i+1} (F)", value=1e-6, format="%.1e", key=f"C{i}")
-        L = st.number_input(f"ESL L{i+1} (H)", value=0.8e-9, format="%.1e", key=f"L{i}")
-        R = st.number_input(f"ESR R{i+1} (Ω)", value=0.01, format="%.2e", key=f"R{i}")
+        C = st.number_input(f"容值 C{i+1} (F)", value=1e-6, format="%.3e", key=f"C{i}")
+        L = st.number_input(f"ESL L{i+1} (H)", value=0.8e-9, format="%.3e", key=f"L{i}")
+        R = st.number_input(f"ESR R{i+1} (Ω)", value=0.01, format="%.3e", key=f"R{i}")
         qty = st.number_input(f"數量 C{i+1}", min_value=1, value=1, step=1, key=f"Q{i}")
         for _ in range(qty):
             capacitors.append({"C": C, "L": L, "R": R})

@@ -23,9 +23,9 @@ st.subheader("電容參數設定")
 
 for i in range(num_caps):
     with st.expander(f"電容 {i+1}", expanded=(i < 3)):
-        C = st.number_input(f"電容 {i+1} 容值 (F)", value=1e-6, format="%.3e", key=f"C{i}")
-        L = st.number_input(f"電容 {i+1} ESL (H)", value=0.8e-9, format="%.3e", key=f"L{i}")
-        R = st.number_input(f"電容 {i+1} ESR (Ω)", value=0.01, format="%.3e", key=f"R{i}")
+        C = st.number_input(f"電容 {i+1} 容值 (F)", value=1e-6, format="%.3e", step=1e-6, key=f"C{i}")
+        L = st.number_input(f"電容 {i+1} ESL (H)", value=0.8e-9, format="%.3e", step=1e-9, key=f"L{i}")
+        R = st.number_input(f"電容 {i+1} ESR (Ω)", value=0.01, format="%.3e", step=1e-3, key=f"R{i}")
         capacitors.append({"C": C, "L": L, "R": R})
 
 # 計算總阻抗
